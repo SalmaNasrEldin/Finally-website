@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie</title>
+    <script src="https://kit.fontawesome.com/8153fb6b2c.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <!-- i used 2 class names i set general rule for elements with the same characteristics  -->
+            <!-- logo -->
+            <a href="index.html" class="logo">
+                fina<span>ll</span>y
+                <!-- since span is inline not border -->
+            </a>
+            <!-- search box -->
+            <div class="search-box">
+                <input type="search" id="search-input" placeholder="search movies">
+                <!-- input just makes a feild ti enter data  -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- i tag represents something foreign, different quality of text  -->
+            </div>
+            <!-- user profile -->
+            <a href="#" class="user">
+                <!-- In that case, the user clicks the link and nothing happens  -->
+                <img src="user.png" class="user-img">
+            </a>
+            <div id="indicator">
+                <label class="switch">
+                    <input type="checkbox" onclick="changeMode()">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <label>
+            <input type="checkbox" id="checkbox-input">
+            <div class="toggle">
+                <span class="topline common"></span>
+                <span class="middleline common"></span>
+                <span class="bottomline common"></span>
+
+            </div>
+            <div class="slide">
+                <h3>MENU</h3>
+                <ul>
+                    <!-- unordered list  -->
+                    <li><a href="home.html"><i class="fa-solid fa-house-chimney"></i> home</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i>my profile</a></li>
+                    <li><a href="#"><i class="fa-solid fa-film"></i>watchlist</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gears"></i>settings</a></li>
+                    <li><a href="admin.html"><i class="fa-solid fa-lock"></i>admin</a></li>
+                    <li><a href="home.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>logout</a></li>
+                    <!-- putting anything inside 'a' tag makes its clickable  -->
+
+                </ul>
+            </div>
+        </label>
+    </header>
+    <!-- play movie  -->
+    <div class="play-container container">
+        <img src="bolt poster.jpg" alt="" class="play-img">
+        <div class="play-text">
+            <h2>Jumanji: Welcome To The Jungle</h2>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div class="tags">
+                <span>Action</span>
+                <span>Adventure</span>
+                <span>4K</span>
+            </div>
+            <!-- trailer button  -->
+            <a href="#" class="watch-btn">
+                <i class="fa-solid fa-play"></i>
+                <span>Watch the trailer</span>
+            </a>
+        </div>
+        <!-- play button  -->
+
+        <a href="bolt .mp4"><i class='bx bxs-right-arrow play-movie'></i></a>
+        <div class="video-container">
+            <div class="video-box">
+                <video id="myvideo" src="Jumanji.mp4" controls></video>
+                <i class='bx bx-x'></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-movie container">
+        <h2>Jumanji: Welcome To The jungle</h2>
+        <p class="discription">when 4 students play with a magical video game, they are drawn to the jungle world of jumanji, where they are trapped as their avatars. to return to the real world, they must finish the game.</p>
+        <h2 class="cast-heading">Movie Cast</h2>
+        <div class="cast">
+            <div class="cast-box">
+                <img src="cast1.jpg" alt="" class="cast-img">
+                <span class="cast-title">Dwayne Johnson</span>
+            </div>
+            <div class="cast-box">
+                <img src="cast2.jpg" alt="" class="cast-img">
+                <span class="cast-title">Karen Gillan</span>
+            </div>
+            <div class="cast-box">
+                <img src="cast3.jpg" alt="" class="cast-img">
+                <span class="cast-title">Kevin Hart</span>
+            </div>
+            <div class="cast-box">
+                <img src="cast4.jpg" alt="" class="cast-img">
+                <span class="cast-title">Jack Black</span>
+            </div>
+            <div class="cast-box">
+                <img src="cast5.jpg" alt="" class="cast-img">
+                <span class="cast-title">Nick Jonas</span>
+            </div>
+            <div class="cast-box">
+                <img src="cast6.jpg" alt="" class="cast-img">
+                <span class="cast-title">Madison Iseman</span>
+            </div>
+        </div>
+    </div>
+    <div class="download">
+        <h2 class="download-title">Download Movie</h2>
+        <div class="download-links">
+            <a href="./Jumanji.mp4" download>480p</a>
+            <a href="Jumanji.mp4" download>720p</a>
+            <a href="Jumanji.mp4" download>1080p</a>
+        </div>
+    </div>
+    <!-- copyright  -->
+    <div class="copyright">
+        <p>&#169; All Rights Reserved</p>
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

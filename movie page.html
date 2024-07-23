@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trial</title>
+    <script src="https://kit.fontawesome.com/8153fb6b2c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+
+   
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <!-- logo -->
+            <a href="index.html" class="logo">
+                fina <span>ll</span>y
+            </a>
+            <!-- search box -->
+            <div class="search-box">
+                <input type="search" name="" id="search-input" placeholder="search movies">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- user profile -->
+            <a href="#" class="user">
+                <img src="user.png" alt="" class="user-img">
+            </a>
+            <!--dark mode-->
+            <div id="indicator">
+                <label class="switch">
+                    <input type="checkbox" onclick="changeMode()">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <label>
+                <input type="checkbox" id="checkbox-input">
+                <div class="toggle">
+                    <span class="topline common"></span>
+                    <span class="middleline common"></span>
+                    <span class="bottomline common"></span>
+
+                </div>
+                <div class="slide">
+                    <h3>MENU</h3>
+                    <ul>
+                        <li> <a href="home.html">home<i class="fa-solid fa-house-chimney"></i></a></li>
+                        <li><a href="#"> my profile<i class="fas fa-user"></i></a></li>
+                        <li><a href="#">watchlist<i class="fa-solid fa-film"></i></a></li>
+                        <li><a href="#">settings<i class="fa-solid fa-gears"></i></a></li>
+                        <li><a href="admin.html">admin<i class="fa-solid fa-lock"></i></a></li>
+                        <li><a href="home.html">logout<i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+
+                    </ul>
+                </div>
+            </label>
+    </header>
+    <!-- home  -->
+    <section class="home container" id="home">
+        <img src="home-background.png" alt="" class="home-img">
+        <div class="home-text">
+            <h1 class="home-title">Hitman's Wife's <br> Bodygaurd</h1>
+            <p>release 10 April</p>
+            <a href="#" class="watch-btn">
+                <i class="fa-solid fa-play"></i>
+                <span onclick="onp">watch the trailer</span>
+            </a>
+        </div>
+    </section>
+    <!-- popular section -->
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <h2 class="heading-title">Popular Movies</h2>
+        </div>
+        <!-- content  -->
+        <div class="popular-content swiper">
+            <div class="swiper-wrapper">
+                <!-- movies box 1 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="encanto.jpeg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Encanto</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 2 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="movie-1.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Jumanji: Welcome To The jungle</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="play.html" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 3 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="orphan.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Orphan</h2>
+                            <span class="movie-type">Thriller</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 4 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="tomorrow war.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Tomorrow</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 5  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="readyplayerone.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Readyplayerone</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 6  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="popular-movie-6.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Hawkeye</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 7  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="Ratatouille.jpeg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Ratatouille</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 8  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="popular-movie-8.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">The Flash</h2>
+                            <span class="movie-type">Action/Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+
+    <!-- Animation section -->
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <h2 class="heading-title">Animation Movies</h2>
+        </div>
+        <!-- content  -->
+        <div class="popular-content swiper">
+            <div class="swiper-wrapper">
+                <!-- movies box 1 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="encanto.jpeg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Encanto</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 2 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="Ratatouille.jpeg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Ratatouille</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 3 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="coco.jpeg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Coco</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 4 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="Moana.png" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Moana</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 5  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="beautybeast.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Beautybeast</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 6  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="brave.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Brave</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 7  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="tangled.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Tangled</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 8  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="monsters.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Monsters</h2>
+                            <span class="movie-type">Animation</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Sci-Fi section -->
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <h2 class="heading-title">Sci-Fi Movies</h2>
+        </div>
+        <!-- content  -->
+        <div class="popular-content swiper">
+            <div class="swiper-wrapper">
+                <!-- movies box 1 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="avatar.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Avatar</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 2 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="divergent.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Divergent</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 3 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="lucy.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Lucy</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 4 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="tomorrow war.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Tomorrow War</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 5  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="planet of the apes.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Planet Of The Apes</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 6  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="readyplayerone.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Readyplayerone</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 7  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="robot.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Robot</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 8  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="selfless.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Selfless</h2>
+                            <span class="movie-type">Sci-Fi</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- thriller section -->
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <h2 class="heading-title">Thriller Movies</h2>
+        </div>
+        <!-- content  -->
+        <div class="popular-content swiper">
+            <div class="swiper-wrapper">
+                <!-- movies box 1 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="changeling.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Changeling</h2>
+                            <span class="movie-type">thriller</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 2 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="darkplaces.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Darkplaces</h2>
+                            <span class="movie-type">thriller</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 3 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="orphan.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Orphan</h2>
+                            <span class="movie-type">thriller</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 4 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="swallow.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Swallow</h2>
+                            <span class="movie-type">thriller</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 5  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="run.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Run</h2>
+                            <span class="movie-type">thriller</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 6  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="shutter.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Shutter</h2>
+                            <span class="movie-type">thriller</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 7  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="thedeparted.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Thedeparted</h2>
+                            <span class="movie-type">thriller</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 8  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="train.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Train</h2>
+                            <span class="movie-type">thriller</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Action section -->
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <h2 class="heading-title">Action Movies</h2>
+        </div>
+        <!-- content  -->
+        <div class="popular-content swiper">
+            <div class="swiper-wrapper">
+                <!-- movies box 1 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="popular-movie-1.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Spider-Man: No Way Home</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 2 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="popular-movie-2.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Jungle Cruise</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 3 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="popular-movie-3.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Loki</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 4 -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="movie-7.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">The Wolverine</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 5  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="popular-movie-5.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">The Falcon And The Winter Soldier</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 6  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="popular-movie-6.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Hawkeye</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 7  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="popular-movie-7.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Agents O S.H.I.E.L.D.</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- movies box 8  -->
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="popular-movie-8.jpg" alt="" class="img-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">The Flash</h2>
+                            <span class="movie-type">Action</span>
+                            <a href="#" class="watch-btn play-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- movies and shows -->
+    <section class="movies container" id="movies">
+        <div class="heading">
+            <h2 class="heading-title">Movies And Shows</h2>
+        </div>
+        <!-- movies content -->
+        <div class="movies-content">
+            <!-- box 1 -->
+            <div class="movie-box">
+                <img src="movie-1.jpg" alt="" class="img-box-img">
+                <div class="box-text">
+                    <h2 class="movie-title">Jumanji: Welcome To The jungle</h2>
+                    <span class="movie-type">Action</span>
+                    <a href="play.html" class="watch-btn play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- box 2 -->
+            <div class="movie-box">
+                <img src="movie-2.jpg" alt="" class="img-box-img">
+                <div class="box-text">
+                    <h2 class="movie-title">Hitmang Bodyguard</h2>
+                    <span class="movie-type">Action/comedy</span>
+                    <a href="play.html" class="watch-btn play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- box 3 -->
+            <div class="movie-box">
+                <img src="movie-3.jpg" alt="" class="img-box-img">
+                <div class="box-text">
+                    <h2 class="movie-title">Sang-Chi</h2>
+                    <span class="movie-type">Action</span>
+                    <a href="#" class="watch-btn play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- box 4 -->
+            <div class="movie-box">
+                <img src="movie-4.jpg" alt="" class="img-box-img">
+                <div class="box-text">
+                    <h2 class="movie-title">Eternals</h2>
+                    <span class="movie-type">Action</span>
+                    <a href="#" class="watch-btn play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- box 5 -->
+            <div class="movie-box">
+                <img src="movie-5.jpg" alt="" class="img-box-img">
+                <div class="box-text">
+                    <h2 class="movie-title">Spectre</h2>
+                    <span class="movie-type">Action</span>
+                    <a href="#" class="watch-btn play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- box 6 -->
+            <div class="movie-box">
+                <img src="movie-6.jpg" alt="" class="img-box-img">
+                <div class="box-text">
+                    <h2 class="movie-title">Money Heist</h2>
+                    <span class="movie-type">Action</span>
+                    <a href="#" class="watch-btn play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- box 7 -->
+            <div class="movie-box">
+                <img src="movie-7.jpg" alt="" class="img-box-img">
+                <div class="box-text">
+                    <h2 class="movie-title">The Wolverine</h2>
+                    <span class="movie-type">Action/Sci-Fi</span>
+                    <a href="#" class="watch-btn play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- box 8 -->
+            <div class="movie-box">
+                <img src="movie-8.jpg" alt="" class="img-box-img">
+                <div class="box-text">
+                    <h2 class="movie-title">Johnny English</h2>
+                    <span class="movie-type">Action/Comedy</span>
+                    <a href="#" class="watch-btn play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- next page  -->
+    <div class="next-page">
+        <a href="#" class="next-btn">Next Page</a>
+
+    </div>
+    <!-- copyright  -->
+    <div class="copyright">
+        <p>&#169; All Rights Reserved</p>
+
+    </div>
+
+
+
+    <script src="swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<html>
+<head>
+    <title>registration form</title>
+    <script>
+        function validateform() {
+            var fullname = document.getElementById("fullname").value;
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email");
+            var pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            var password = document.getElementById("password");
+            var password2 = document.getElementById("password2").value;
+            if (fullname == "") {
+                document.getElementById("message1").innerHTML = "please enter full name";
+                return false;
+            }
+            if (!isNaN(fullname)) {
+                document.getElementById("message1").innerHTML = "only character is allowed";
+                return false;
+            }
+            else {
+                document.getElementById("message1").innerHTML = "";
+            }
+            if (username == "") {
+                document.getElementById("message2").innerHTML = "please enter user name";
+                return false;
+            }
+            else {
+                document.getElementById("message2").innerHTML = "";
+            }
+            if (email.value == "") {
+                document.getElementById("message3").innerHTML = "please enter email";
+                return false;
+            }
+            if (!pattern.test(email.value)) {
+                document.getElementById("message3").innerHTML = "Please provide a valid email address";
+                email.focus;
+                return false;
+            }
+            else {
+                document.getElementById("message3").innerHTML = "";
+            }
+            if (password.value == "") {
+                document.getElementById("message4").innerHTML = "please enter password";
+                return false;
+            }
+            if (password.value.length < 8) {
+                document.getElementById("message4").innerHTML = " password must be at least 8 characters";
+                return false;
+            }
+            else {
+                document.getElementById("message4").innerHTML = "";
+            }
+            if (password2 == "") {
+                document.getElementById("message5").innerHTML = "please enter password again";
+                return false;
+            }
+            if (password.value != password2) {
+                document.getElementById("message5").innerHTML = " password are not matching";
+                return false;
+            }
+            else {
+                document.getElementById("message5").innerHTML = "";
+            }
+
+        }
+        //LOCAL STORAGE....
+        var users = [];
+        if (localStorage.getItem("x") == null) {
+            users = [];
+        }
+        else {
+            users = JSON.parse(localStorage.getItem("x"));
+        }
+        function register() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var password2 = document.getElementById("password2").value;
+
+         
+            if (password == password2) {
+
+                //set user input into JSON
+                var user = { email: email, password: password };
+                //push new user to array
+                users.push(user);
+                //save to localStorage
+                localStorage.setItem("x", JSON.stringify(users));
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="registration-form">
+        <h1>Registration form</h1>
+        <form action="spin.html" method="post" onsubmit="return validateform()">
+            <p>Full Name:</p>
+            <input type="text" id="fullname" placeholder="Full Name" oninput="return validateform()" />
+            <span id="message1" style="color:red;"></span>
+            <p>User Name:</p>
+            <input type="text" id="username" placeholder="User Name" oninput="return validateform()" />
+            <span id="message2" style="color:red;"></span>
+            <p>Email:</p>
+            <input type="text" id="email" placeholder="Email" oninput="return validateform()" />
+            <span id="message3" style="color:red;"></span>
+            <p>Password:</p>
+            <input type="password" id="password" placeholder="password" oninput="return validateform()" />
+            <span id="message4" style="color:red;"></span>
+            <p>confirm Password:</p>
+            <input type="password" id="password2" placeholder="confirm password" oninput="return validateform()" />
+            <span id="message5" style="color:red;"></span>
+            <button type="submit" onclick="register()">Register</button>
+        </form>
+    </div>
+    <div class="popcorn">
+        <img src="popcorn.png">
+        <img src="popcorn.png">
+        <img src="popcorn.png">
+        <img src="popcorn.png">
+        <img src="popcorn.png">
+        <img src="popcorn.png">
+        <img src="popcorn.png">
+
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-image: url("movie.jpeg" );
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+    .registration-form {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-60%);
+        width: 400px;
+        z-index: 100;
+    }
+
+        .registration-form h1 {
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 40px 0;
+        }
+
+        .registration-form p {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .registration-form input {
+            font-size: 16px;
+            padding: 15px 10px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .registration-form button {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 10px 15px;
+            width: 50%;
+            border: none;
+            border-radius: 5px;
+            background: #01705f;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+            .registration-form button:hover {
+                background: whitesmoke;
+                color: #01705f;
+            }
+    /* popcorn animation  ============================*/
+
+    .popcorn img {
+        width: 70px;
+        animation: popcorn 3s linear infinite;
+    }
+
+    .popcorn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        top: -70px;
+    }
+
+    @keyframes popcorn {
+        0% {
+            transform: translateY(100);
+            opacity: 0;
+            /* not seen since it is at the bottom  */
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        70% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(100vh);
+            /* when in the screen it shoud dissapear  */
+            opacity: 0;
+        }
+    }
+
+    .popcorn img:nth-child(1) {
+        animation-delay: 2s;
+    }
+
+    .popcorn img:nth-child(2) {
+        animation-delay: 1s;
+    }
+
+    .popcorn img:nth-child(3) {
+        animation-delay: 3s;
+    }
+
+    .popcorn img:nth-child(4) {
+        animation-delay: 4.5s;
+    }
+
+    .popcorn img:nth-child(5) {
+        animation-delay: 5s;
+    }
+
+    .popcorn img:nth-child(6) {
+        animation-delay: 6s;
+    }
+
+    .popcorn img:nth-child(7) {
+        animation-delay: 7s;
+    }
+</style>
+</html>

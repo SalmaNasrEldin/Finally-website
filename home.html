@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FINALLY!</title>
+    <script src="https://kit.fontawesome.com/8153fb6b2c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        /*go to log in page*/
+        function myonclickfn() {
+            document.location.href = "login page.html";
+        }
+        /*go to sign up page*/
+        function myonclickfn2() {
+            document.location.href = "sign up.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="selectBG">
+        <div class="navbar">
+            <h1 class="title"> FINALLY </h1>
+            <div class="content">
+                <small>welcome to our</small>
+                <h2>smart <br> movie box</h2>
+                <button type="button" onclick="myonclickfn()">login</button>
+                <button type="button" onclick="myonclickfn2()">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+
+    .title {
+        font-size: 50px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-family: cursive;
+        font-style: italic;
+    }
+
+    .navbar {
+        width: 85%;
+        height: 15%;
+        margin: auto;
+        display: flex;
+        align-items: center; /*position it in the centre of the height */
+        justify-content: space-between;
+        /* distribution of space between all elements flexed in the box */
+    }
+
+    button {
+        color: #fbfcfd;
+        padding: 10px 25px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .content {
+        color: #fbfcfd;
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        transform: translateY(-50%)
+        /* move up and down ... up is -ve down is +ve */
+    }
+
+    h2 {
+        font-size: 80px;
+        margin: 10px 0 30px;
+        line-height: 80px;
+    }
+
+
+    .selectBG {
+        width: 100%;
+        height: 100vh;
+        background-image: url("movie.jpeg" );
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden; /* to hide elements i dont wish to be seen by the user*/
+        justify-content: center;
+        animation: change 24s infinite ease-in-out;
+    }
+    /*change BG*/
+    @keyframes change {
+        0% {
+            background-image: url(movie.jpeg);
+        }
+
+        20% {
+            background-image: url(movie-4.jpg);
+        }
+
+        40% {
+            background-image: url(home-background.png);
+        }
+
+        60% {
+            background-image: url(popular-movie-3.jpg);
+        }
+
+        80% {
+            background-image: url(movie-4.jpg);
+        }
+
+        100% {
+            background-image: url(movie.jpeg);
+        }
+    }
+
+  
+</style>
+</html>
